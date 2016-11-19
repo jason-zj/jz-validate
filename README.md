@@ -16,3 +16,4 @@
 ```
 <input type="text" placeholder="请输入帐号" data-validate="required,min[3]">
 ```
+
