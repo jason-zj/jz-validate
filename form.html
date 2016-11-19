@@ -6,21 +6,28 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>validate</title>
     <style>
-	input.error{ border:1px solid #F00;}
-	.error-box{ font-size:12px; color:#F00}
+	.error{ border:1px solid #F00;}
+	.error-box{ font-size:12px; color:#F00; margin-left:3px}
 	</style>
 </head>
 <body>
 <div id="wrap">
-	<form id="validate">
-    	<p>帐号：<input type="text" placeholder="请输入帐号" data-validate="required,CN">
-        <p>姓名：<input type="text" placeholder="请输入汉字" data-validate="CN">
-        <p>邮箱：<input type="text" placeholder="请输入邮箱"data-validate=""></p>
-        <p>QQ：<input type="text" placeholder="请输入QQ" data-validate=""></p>
+	<form id="form">
+    	<p>帐号：<input type="text" placeholder="请输入帐号" data-validate="required,min[3]"></p>
+        <p>姓名：<input type="text" placeholder="请输入汉字" data-validate="length[3-5]"></p>
+        <p>邮箱：<input type="text" placeholder="请输入邮箱" data-validate="email"></p>
+        <p>QQ：	 <input type="text" placeholder="请输入QQ"   data-validate="qq"></p>        
         <p>手机：<input type="text" placeholder="请输入手机" data-validate="phone"></p>
+        <p>备注：	 <textarea data-validate="required"></textarea></p>
+        <p>备注2：	 <textarea data-validate="required,CN"></textarea></p>
         <input type="submit">
-    </form> 
-    
+    </form>
+    <p>
+    	1.validata(formId)方法调用!<br>
+		2.data-validate属性验证字段。<br>
+        3.多重验证，中间加逗号！
+    </p>
 <script src="js/jz-validate.js"></script>
+<script>validata(form);</script>
 </body>
 </html>
