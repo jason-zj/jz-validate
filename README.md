@@ -1,0 +1,2 @@
+# jz-validate
+- basic over！
