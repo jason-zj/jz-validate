@@ -79,7 +79,8 @@
 			if(ruleName.indexOf(",") >= 0){				
 				var rules = ruleName.split(",");				
 				for (var i in rules) {
-					validate.methods.validateStart(obj,validate.methods.trim(rules[i]));
+					var suc = validate.methods.validateStart(obj,validate.methods.trim(rules[i]));
+					if(!suc) break;
 				}
 			}else{
 				validate.methods.validateStart(obj,validate.methods.trim(ruleName))
