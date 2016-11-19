@@ -1,7 +1,7 @@
 /*!
  * 表单验证插件,原生js，不依赖JQ 
  * @Author Jason-zj
- * Github地址：
+ * Github地址：https://github.com/jason-zj/jz-validate
  * 个人博客：https://jason-zj.github.io/
  */
 (function(window){
