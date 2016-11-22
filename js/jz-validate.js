@@ -35,6 +35,7 @@
 						var rules = ruleName.split(",");
 						for (var s in rules) {
 							result = validate.methods.validateStart(that,rules[s]);
+							if(!result) break;
 						}					
 					}else{
 						result = validate.methods.validateStart(that,ruleName);	
